@@ -37,14 +37,22 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+//navigation links from object above
+let nav = document.querySelectorAll("nav a")
+nav.forEach((x) => {
+  x.textContent = siteContent["nav"]["nav-item-1"]
+})
+console.log(nav)
+
+//Update the img src for the logo
 let logo = document.getElementById("logo-img");
 console.log(logo)
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelectorAll("nav a")
-nav.forEach((x) => {
-  x.textContent = "test"
-})
 
-console.log(nav)
+
+//footer
+let footer = document.querySelector("footer p")
+footer.textContent = siteContent.footer.copyright
+
