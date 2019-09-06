@@ -37,21 +37,29 @@ const siteContent = {
   },
 };
 
-
+// NAVIGATION //
 //navigation links from object above
 let nav = document.querySelectorAll("nav a")
-nav.forEach((x) => {
-  x.textContent = siteContent["nav"]["nav-item-1"]
-})
-console.log(nav)
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"]
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"]
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"]
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"]
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"]
+nav[5].innerHTML = siteContent["nav"]["nav-item-6"]
+//console.log(nav)
 
 //Update the img src for the logo
 let logo = document.getElementById("logo-img");
-console.log(logo)
+//console.log(logo)
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-
+//  C T A  //
+let callToAction = document.querySelectorAll("section.cta")
+callToAction[0].childNodes[1].innerHTML = siteContent["cta"]["h1"]
+console.log(callToAction[0].childNodes)
+callToAction[0].childNodes[3].setAttribute("src", siteContent["cta"]["img-src"])
+console.log(siteContent["cta"]["img-src"])
 //footer
 let footer = document.querySelector("footer p")
 footer.textContent = siteContent.footer.copyright
