@@ -55,11 +55,44 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //  C T A  //
-let callToAction = document.querySelectorAll("section.cta")
-callToAction[0].childNodes[1].innerHTML = siteContent["cta"]["h1"]
-console.log(callToAction[0].childNodes)
-callToAction[0].childNodes[3].setAttribute("src", siteContent["cta"]["img-src"])
-console.log(siteContent["cta"]["img-src"])
+//
+let callToAction = document.querySelectorAll(".cta-text h1")
+console.log(callToAction)
+//button in cta
+callToAction[0].innerHTML = siteContent["cta"]["h1"]
+document.querySelector(".cta-text button").innerHTML = siteContent["cta"]["button"]
+document.getElementById("cta-img").setAttribute("src", siteContent["cta"]["img-src"])
+
+
+// MAIN CONTENT //
+//top content
+let topContent = document.querySelectorAll(".main-content .top-content .text-content")
+topContent[0].childNodes[1].innerHTML = siteContent["main-content"]["features-h4"]
+topContent[0].childNodes[3].innerHTML = siteContent["main-content"]["features-content"]
+topContent[1].childNodes[1].innerHTML = siteContent["main-content"]["about-h4"]
+topContent[1].childNodes[3].innerHTML = siteContent["main-content"]["about-content"]
+
+//middle image
+document.getElementById("middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//bottom content
+let bContent = document.querySelectorAll(".main-content .bottom-content .text-content")
+bContent[0].childNodes[1].innerHTML = siteContent["main-content"]["services-h4"]
+bContent[0].childNodes[3].innerHTML = siteContent["main-content"]["services-content"]
+bContent[1].childNodes[1].innerHTML = siteContent["main-content"]["product-h4"]
+bContent[1].childNodes[3].innerHTML = siteContent["main-content"]["product-content"]
+bContent[2].childNodes[1].innerHTML = siteContent["main-content"]["services-h4"]
+bContent[2].childNodes[3].innerHTML = siteContent["main-content"]["services-content"]
+
+
+// CONTACT //
+
+let contact = document.querySelectorAll(".contact")
+
+contact[0].childNodes[1].innerHTML = siteContent["contact"]["contact-h4"]
+contact[0].childNodes[3].innerHTML = siteContent["contact"]["address"]
+contact[0].childNodes[5].innerHTML = siteContent["contact"]["phone"]
+contact[0].childNodes[7].innerHTML = siteContent["contact"]["email"]
 //footer
 let footer = document.querySelector("footer p")
 footer.textContent = siteContent.footer.copyright
