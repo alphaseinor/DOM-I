@@ -49,17 +49,23 @@ nav[5].innerHTML = siteContent["nav"]["nav-item-6"]
 //console.log(nav)
 
 // TASK 3 //
+
+// change color to green
 nav.forEach((anchor) => {
   anchor.style.color = "green"
 })
 
+//append item
+
 newNavItem1 = document.createElement('a')
-
-newNavItem1.textContent = "yo bro"
-
+newNavItem1.textContent = "sweet"
 navigation = document.querySelector('nav')
-
 navigation.append(newNavItem1)
+
+//prepend item
+newNavItem2 = document.createElement('a')
+newNavItem2.textContent = "dude"
+navigation.prepend(newNavItem2)
 
 //Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -94,8 +100,8 @@ bContent[0].childNodes[1].innerHTML = siteContent["main-content"]["services-h4"]
 bContent[0].childNodes[3].innerHTML = siteContent["main-content"]["services-content"]
 bContent[1].childNodes[1].innerHTML = siteContent["main-content"]["product-h4"]
 bContent[1].childNodes[3].innerHTML = siteContent["main-content"]["product-content"]
-bContent[2].childNodes[1].innerHTML = siteContent["main-content"]["services-h4"]
-bContent[2].childNodes[3].innerHTML = siteContent["main-content"]["services-content"]
+bContent[2].childNodes[1].innerHTML = siteContent["main-content"]["vision-h4"]
+bContent[2].childNodes[3].innerHTML = siteContent["main-content"]["vision-content"]
 
 
 // CONTACT //
