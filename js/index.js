@@ -53,6 +53,14 @@ nav.forEach((anchor) => {
   anchor.style.color = "green"
 })
 
+newNavItem1 = document.createElement('a')
+
+newNavItem1.textContent = "yo bro"
+
+navigation = document.querySelector('nav')
+
+navigation.append(newNavItem1)
+
 //Update the img src for the logo
 let logo = document.getElementById("logo-img");
 //console.log(logo)
