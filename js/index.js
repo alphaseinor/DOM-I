@@ -48,6 +48,11 @@ nav[4].innerHTML = siteContent["nav"]["nav-item-5"]
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"]
 //console.log(nav)
 
+// TASK 3 //
+nav.forEach((anchor) => {
+  anchor.style.color = "green"
+})
+
 //Update the img src for the logo
 let logo = document.getElementById("logo-img");
 //console.log(logo)
